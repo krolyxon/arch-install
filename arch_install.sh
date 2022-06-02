@@ -57,17 +57,17 @@ sed -i 's/quiet/pci=noaer/g' /etc/default/grub
 sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
- 
 pacman -S --noconfirm xorg-server xorg-xprop xorg-xkill xorg-xsetroot xorg-xinit \
     noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
-    awesome-terminal-fonts cmake dunst exa btop ntfs-3g \
+    awesome-terminal-fonts cmake libnotify dunst exa btop ntfs-3g \
     jq mpv ncdu maim obs-studio transmission-cli yt-dlp cowsay \
     pacman-contrib pavucontrol rsync ueberzug ranger python-pywal \
-    sfml sxiv xdotool xwallpaper zip unzip wget pcmanfm \
+    sxiv xdotool xwallpaper zip unzip wget pcmanfm \
     fzf man-db pipewire pipewire-pulse xcompmgr firefox pamixer \
     xclip sxhkd imagemagick networkmanager git dash arc-gtk-theme papirus-icon-theme \
-    neovim lua lua-language-server lldb rust-analyzer rustup xdg-user-dirs
+    neovim lua rust-analyzer rustup xdg-user-dirs
     zsh zsh-autosuggestions zsh-syntax-highlighting zathura zathura-pdf-poppler 
+    
 systemctl enable NetworkManager.service 
 rm /bin/sh
 ln -s dash /bin/sh
@@ -91,20 +91,31 @@ cd $HOME
 git clone --separate-git-dir=$HOME/.dotfiles https://github.com/krolyxon/dotfiles.git tmpdotfiles
 rsync --recursive --verbose --exclude '.git' tmpdotfiles/ $HOME/
 rm -r tmpdotfiles
+# dwm : Window Manager
 git clone --depth=1 https://github.com/krolyxon/dwm.git ~/.local/src/dwm
 sudo make -C ~/.local/src/dwm install
+
+# st: Terminal
 git clone --depth=1 https://github.com/krolyxon/st.git ~/.local/src/st
 sudo make -C ~/.local/src/st install
+
+# dmenu: Program Menu
 git clone --depth=1 https://github.com/krolyxon/dmenu.git ~/.local/src/dmenu
 sudo make -C ~/.local/src/dmenu install
+
+# slstatus: Status bar for dwm
 git clone --depth=1 https://github.com/krolyxon/slstatus.git ~/.local/src/slstatus
 sudo make -C ~/.local/src/slstatus install
+
+# nvim: Text editor
 git clone --depth=1 https://github.com/krolyxon/nvim.git ~/.config/nvim
+
+# paru: AUR helper
 git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -si && cd .. && rm -rf paru-bin
 paru -S --noconfirm nerd-fonts-hack 
 paru -S libxft-bgra
 chsh -s $(which zsh)
-printf "bro do you want to install that fucking nvidia-390xx drivers? (y-N): " 
+printf "bro do you want to install that fucking nvidia-390xx drivers? (y/n): " 
 read driver
 if [[ $driver = y ]]; then
   paru -S --noconfirm nvidia-390xx
