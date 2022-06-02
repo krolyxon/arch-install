@@ -106,9 +106,9 @@ paru -S libxft-bgra
 chsh -s $(which zsh)
 printf "bro do you want to install that fucking nvidia-390xx drivers? (y-N): " 
 read driver
-if [[ $driver == y ]]; then
+if [[ $driver = y ]]; then
   paru -S --noconfirm nvidia-390xx
-    fi
+fi
 
 ln -s ~/.config/x11/xinitrc .xinitrc
 ln -s ~/.config/shell/profile .zprofile
