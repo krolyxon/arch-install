@@ -65,7 +65,7 @@ pacman -S --noconfirm xorg-server xorg-xprop xorg-xkill xorg-xsetroot xorg-xinit
     sxiv xdotool xwallpaper zip unzip wget pcmanfm \
     fzf man-db pipewire pipewire-pulse xcompmgr firefox pamixer \
     xclip sxhkd imagemagick networkmanager git dash arc-gtk-theme papirus-icon-theme \
-    neovim lua rust-analyzer rustup xdg-user-dirs
+    neovim lua rust-analyzer rustup xdg-user-dirs \
     zsh zsh-autosuggestions zsh-syntax-highlighting zathura zathura-pdf-poppler 
     
 systemctl enable NetworkManager.service 
