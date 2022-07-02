@@ -88,27 +88,27 @@ exit
 #part3
 printf '\033c'
 cd $HOME
-git clone --separate-git-dir=$HOME/.dotfiles https://github.com/krolyxon/dotfiles.git tmpdotfiles
+git clone --separate-git-dir=$HOME/.dotfiles git@github.com:krolyxon/dotfiles.git tmpdotfiles
 rsync --recursive --verbose --exclude '.git' tmpdotfiles/ $HOME/
 rm -r tmpdotfiles
 # dwm : Window Manager
-git clone --depth=1 https://github.com/krolyxon/dwm.git ~/.local/src/dwm
+git clone --depth=1 git@github.com:krolyxon/dwm.git ~/.local/src/dwm
 sudo make -C ~/.local/src/dwm install
 
 # st: Terminal
-git clone --depth=1 https://github.com/krolyxon/st.git ~/.local/src/st
+git clone --depth=1 git@github.com:krolyxon/st.git ~/.local/src/st
 sudo make -C ~/.local/src/st install
 
 # dmenu: Program Menu
-git clone --depth=1 https://github.com/krolyxon/dmenu.git ~/.local/src/dmenu
+git clone --depth=1 git@github.com:krolyxon/dmenu.git ~/.local/src/dmenu
 sudo make -C ~/.local/src/dmenu install
 
 # slstatus: Status bar for dwm
-git clone --depth=1 https://github.com/krolyxon/slstatus.git ~/.local/src/slstatus
+git clone --depth=1 git@github.com:krolyxon/slstatus.git ~/.local/src/slstatus
 sudo make -C ~/.local/src/slstatus install
 
 # nvim: Text editor
-git clone --depth=1 https://github.com/krolyxon/nvim.git ~/.config/nvim
+git clone --depth=1 git@github.com:krolyxon/nvim.git ~/.config/nvim
 
 # paru: AUR helper
 git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -si && cd .. && rm -rf paru-bin
