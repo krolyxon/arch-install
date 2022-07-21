@@ -59,7 +59,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 pacman -S --noconfirm xorg-server xorg-xprop xorg-xkill xorg-xsetroot xorg-xinit \
     noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
-    awesome-terminal-fonts cmake libnotify dunst exa btop ntfs-3g \
+    awesome-terminal-fonts cmake libnotify dunst btop ntfs-3g \
     jq mpv ncdu maim obs-studio transmission-cli yt-dlp cowsay \
     pacman-contrib pavucontrol rsync ueberzug ffmpegthumbnailer python-pywal \
     sxiv xdotool xwallpaper zip unzip wget pcmanfm \
@@ -112,7 +112,7 @@ git clone --depth=1 git@github.com:krolyxon/nvim.git ~/.config/nvim
 
 # paru: AUR helper
 git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -si && cd .. && rm -rf paru-bin
-paru -S --noconfirm nerd-fonts-hack lf-bin libxft-bgra
+paru -S --noconfirm lf-bin libxft-bgra
 chsh -s $(which zsh)
 printf "bro do you want to install that fucking nvidia-390xx drivers? (y/n): " 
 read driver
