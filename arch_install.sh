@@ -112,7 +112,7 @@ git clone --depth=1 git@github.com:krolyxon/nvim.git ~/.config/nvim
 
 # paru: AUR helper
 git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -si && cd .. && rm -rf paru-bin
-paru -S --noconfirm lf-bin libxft-bgra
+paru -S --noconfirm nerd-fonts-jetbrains-mono lf-bin libxft-bgra
 chsh -s $(which zsh)
 printf "bro do you want to install that fucking nvidia-390xx drivers? (y/n): " 
 read driver
