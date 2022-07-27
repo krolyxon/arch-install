@@ -58,7 +58,7 @@ sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
 pacman -S --noconfirm xorg-server xorg-xprop xorg-xkill xorg-xsetroot xorg-xinit \
-    noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-jetbrains-mono ttf-font-awesome \
+    noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-font-awesome \
     awesome-terminal-fonts libnotify dunst ntfs-3g \
     jq mpv ncdu maim obs-studio transmission-cli yt-dlp cowsay \
     pacman-contrib pavucontrol rsync ueberzug ffmpegthumbnailer python-pywal \
