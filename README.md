@@ -1,1 +1,3 @@
 # arch-install
+arch linux install script with all my configs...
+forked from bugswriter.
