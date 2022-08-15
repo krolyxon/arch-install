@@ -60,7 +60,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S --noconfirm xorg-server xorg-xprop xorg-xkill xorg-xsetroot xorg-xinit \
     noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-font-awesome \
     awesome-terminal-fonts libnotify dunst ntfs-3g \
-    jq mpv ncdu maim obs-studio transmission-cli yt-dlp cowsay \
+    jq mpv ncdu maim transmission-cli yt-dlp cowsay \
     pacman-contrib pavucontrol rsync ueberzug ffmpegthumbnailer python-pywal \
     sxiv xdotool xwallpaper zip unzip wget pcmanfm \
     fzf man-db pipewire pipewire-pulse xcompmgr firefox pamixer \
