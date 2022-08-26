@@ -103,10 +103,6 @@ sudo make -C ~/.local/src/st install
 git clone --depth=1 git@github.com:krolyxon/dmenu.git ~/.local/src/dmenu
 sudo make -C ~/.local/src/dmenu install
 
-# slstatus: Status bar for dwm
-git clone --depth=1 git@github.com:krolyxon/slstatus.git ~/.local/src/slstatus
-sudo make -C ~/.local/src/slstatus install
-
 # nvim: Text editor
 git clone --depth=1 git@github.com:krolyxon/nvim.git ~/.config/nvim
 
