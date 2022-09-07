@@ -65,7 +65,7 @@ pacman -S --noconfirm xorg-server xorg-xprop xorg-xkill xorg-xsetroot xorg-xinit
     sxiv xdotool xwallpaper zip unzip wget pcmanfm \
     fzf man-db pipewire pipewire-pulse xcompmgr firefox pamixer \
     xclip sxhkd imagemagick connman wpa_supplicant git dash arc-gtk-theme papirus-icon-theme \
-    neovim lua rust-analyzer rustup xdg-user-dirs mpd ncmpcpp \
+    neovim lua rustup xdg-user-dirs mpd ncmpcpp \
     zsh zsh-autosuggestions zathura zathura-pdf-poppler 
     
 systemctl enable connman.service 
