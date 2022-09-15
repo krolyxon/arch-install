@@ -108,7 +108,7 @@ git clone --depth=1 git@github.com:krolyxon/nvim.git ~/.config/nvim
 
 # paru: AUR helper
 git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -sri && cd .. && rm -rf paru-bin
-paru -S --noconfirm htop-vim nerd-fonts-jetbrains-mono lf-bin libxft-bgra \
+paru -S --noconfirm htop-vim nerd-fonts-jetbrains-mono lf-bin \
     zsh-fast-syntax-highlighting-git keyd-git librewolf-bin
 
 chsh -s $(which zsh)
