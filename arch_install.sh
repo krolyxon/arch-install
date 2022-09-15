@@ -63,7 +63,7 @@ pacman -S --noconfirm xorg-server xorg-xprop xorg-xkill xorg-xsetroot xorg-xinit
     jq mpv ncdu maim transmission-cli yt-dlp cowsay \
     pacman-contrib pavucontrol rsync ripgrep ueberzug ffmpegthumbnailer python-pywal \
     sxiv xdotool xwallpaper zip unzip wget pcmanfm \
-    fzf man-db pipewire pipewire-pulse xcompmgr firefox pamixer \
+    fzf man-db pipewire pipewire-pulse xcompmgr pamixer \
     xclip sxhkd imagemagick connman wpa_supplicant git dash arc-gtk-theme papirus-icon-theme \
     neovim lua rustup xdg-user-dirs mpd ncmpcpp \
     zsh zsh-autosuggestions zathura zathura-pdf-poppler 
@@ -108,7 +108,9 @@ git clone --depth=1 git@github.com:krolyxon/nvim.git ~/.config/nvim
 
 # paru: AUR helper
 git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -sri && cd .. && rm -rf paru-bin
-paru -S --noconfirm htop-vim nerd-fonts-jetbrains-mono lf-bin libxft-bgra zsh-fast-syntax-highlighting-git keyd-git
+paru -S --noconfirm htop-vim nerd-fonts-jetbrains-mono lf-bin libxft-bgra \
+    zsh-fast-syntax-highlighting-git keyd-git librewolf-bin
+
 chsh -s $(which zsh)
 printf "bro do you want to install that fucking nvidia-390xx drivers? (y/n): " 
 read driver
