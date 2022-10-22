@@ -106,6 +106,10 @@ sudo make -C ~/.local/src/dmenu install
 # nvim: Text editor
 git clone --depth=1 git@github.com:krolyxon/nvim.git ~/.config/nvim
 
+# keyd configuration: key remapping
+sudo mkdir -p /etc/keyd
+sudo wget https://raw.githubusercontent.com/krolyxon/keyd-config/master/default.conf -P /etc/keyd/
+
 # paru: AUR helper
 git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -sri && cd .. && rm -rf paru-bin
 paru -S --noconfirm htop-vim nerd-fonts-jetbrains-mono lf-bin \
