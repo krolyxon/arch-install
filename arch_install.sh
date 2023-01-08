@@ -64,11 +64,11 @@ pacman -S --noconfirm xorg-server xorg-xprop xorg-xkill xorg-xsetroot xorg-xinit
     pacman-contrib pavucontrol rsync ripgrep ueberzug ffmpegthumbnailer python-pywal \
     sxiv xdotool xwallpaper zip unzip wget pcmanfm \
     fzf man-db pipewire pipewire-pulse xcompmgr pamixer \
-    xclip sxhkd imagemagick networkmanager git dash arc-gtk-theme papirus-icon-theme \
+    xclip sxhkd imagemagick connman wpa_supplicant git dash arc-gtk-theme papirus-icon-theme \
     neovim lua rustup xdg-user-dirs mpd ncmpcpp unclutter \
     zsh zsh-autosuggestions zathura zathura-pdf-poppler 
     
-systemctl enable NetworkManager.service 
+systemctl enable connman.service 
 rm /bin/sh
 ln -s dash /bin/sh
 # echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
