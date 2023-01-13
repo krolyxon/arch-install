@@ -96,8 +96,8 @@ git clone --depth=1 git@github.com:krolyxon/dwm.git ~/.local/src/dwm
 sudo make -C ~/.local/src/dwm install
 
 # st: Terminal
-git clone --depth=1 git@github.com:krolyxon/st.git ~/.local/src/st
-sudo make -C ~/.local/src/st install
+git clone --depth=1 git@github.com:krolyxon/st-luke.git ~/.local/src/st
+sudo make -C ~/.local/src/st-luke install
 
 # dmenu: Program Menu
 git clone --depth=1 git@github.com:krolyxon/dmenu.git ~/.local/src/dmenu
