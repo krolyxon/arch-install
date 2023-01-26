@@ -59,7 +59,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 pacman -S --noconfirm xorg-server xorg-xprop xorg-xkill xorg-xsetroot xorg-xinit \
     noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-font-awesome \
-    awesome-terminal-fonts libnotify dunst ntfs-3g \
+    awesome-terminal-fonts bat libnotify dunst ntfs-3g \
     jq mpv ncdu maim transmission-cli yt-dlp cowsay \
     pacman-contrib pavucontrol rsync ripgrep ueberzug ffmpegthumbnailer python-pywal \
     sxiv xdotool xwallpaper zip unzip wget pcmanfm \
