@@ -58,7 +58,7 @@ sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
 pacman -S --noconfirm xorg-server xorg-xprop xorg-xkill xorg-xsetroot xorg-xinit \
-    noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-font-awesome \
+    noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-jetbrains-mono-nerd ttf-font-awesome \
     awesome-terminal-fonts bat libnotify dunst ntfs-3g \
     jq mpv ncdu maim transmission-cli yt-dlp cowsay \
     pacman-contrib pavucontrol rsync ripgrep ueberzug ffmpegthumbnailer python-pywal \
@@ -112,7 +112,7 @@ sudo wget https://raw.githubusercontent.com/krolyxon/keyd-config/master/default.
 
 # paru: AUR helper
 git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -sri && cd .. && rm -rf paru-bin
-paru -S --noconfirm htop-vim nerd-fonts-jetbrains-mono lf-bin \
+paru -S --noconfirm htop-vim lf-bin \
     zsh-fast-syntax-highlighting-git keyd-git librewolf-bin
 
 chsh -s $(which zsh)
