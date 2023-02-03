@@ -103,7 +103,11 @@ sudo make -C ~/.local/src/st-luke install
 git clone --depth=1 git@github.com:krolyxon/dmenu.git ~/.local/src/dmenu
 sudo make -C ~/.local/src/dmenu install
 
-# nvim: Text editor
+## nsxiv: image viewer
+git clone --depth=1 git@github.com:krolyxon/nsxiv.git ~/.local/src/nsxiv
+sudo make -C ~/.local/src/nsxiv install
+
+ nvim: Text editor
 git clone --depth=1 git@github.com:krolyxon/nvim.git ~/.config/nvim
 
 # keyd configuration: key remapping
