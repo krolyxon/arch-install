@@ -6,32 +6,32 @@ pacman --noconfirm -Sy archlinux-keyring
 loadkeys us
 timedatectl set-ntp true
 lsblk
-printf "\e[0;34mEnter the drive: \e[0m" 
+printf "\e[0;34mEnter the drive: \e[0m"
 read drive
-cfdisk $drive 
-printf "\e[0;34mEnter the EFI partition: \e[0m" 
+cfdisk $drive
+printf "\e[0;34mEnter the EFI partition: \e[0m"
 read efipartition
-mkfs.fat -F32 $efipartition 
+mkfs.fat -F32 $efipartition
 read -p "Did you also create swap partition? [y/n]" answer
 if [[ $answer = y ]] ; then
-  printf "\e[0;34mEnter swap partition: \e[0m" 
+  printf "\e[0;34mEnter swap partition: \e[0m"
   read swappartition
   mkswap $swappartition
   swapon $swappartition
 fi
-printf "\e[0;34mEnter the linux filesystem partition: \e[0m" 
+printf "\e[0;34mEnter the linux filesystem partition: \e[0m"
 read partition
-mkfs.ext4 $partition 
+mkfs.ext4 $partition
 echo "mounting $partition to /mnt"
-mount $partition /mnt 
+mount $partition /mnt
 pacstrap /mnt base base-devel linux linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
 sed '1,/^#part2/d'  arch_install.sh > /mnt/arch_install2.sh
 chmod +x /mnt/arch_install2.sh
 arch-chroot /mnt ./arch_install2.sh
-exit 
+exit
 
-#part2 
+#part2
 printf '\033c'
 ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 hwclock --systohc
@@ -62,13 +62,13 @@ pacman -S --noconfirm xorg-server xorg-xprop xorg-xkill xorg-xsetroot xorg-xinit
     awesome-terminal-fonts bat libnotify dunst ntfs-3g \
     jq mpv ncdu maim transmission-cli yt-dlp cowsay \
     pacman-contrib pavucontrol rsync ripgrep ueberzug ffmpegthumbnailer python-pywal \
-    sxiv xdotool xwallpaper zip unzip wget pcmanfm \
+    imlib2 xdotool xwallpaper zip unzip wget pcmanfm \
     fzf man-db pipewire pipewire-pulse xcompmgr pamixer \
     xclip sxhkd imagemagick connman wpa_supplicant git dash arc-gtk-theme papirus-icon-theme \
     neovim lua rustup xdg-user-dirs mpd ncmpcpp unclutter \
-    zsh zsh-autosuggestions zathura zathura-pdf-poppler 
-    
-systemctl enable connman.service 
+    zsh zsh-autosuggestions zathura zathura-pdf-poppler
+
+systemctl enable connman.service
 rm /bin/sh
 ln -s dash /bin/sh
 # echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
@@ -83,7 +83,7 @@ sed '1,/^#part3/d' arch_install2.sh > $ai3_path
 chown $username:$username $ai3_path
 chmod +x $ai3_path
 su -c $ai3_path -s /bin/sh $username
-exit 
+exit
 
 #part3
 printf '\033c'
