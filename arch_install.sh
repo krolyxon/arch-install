@@ -95,6 +95,10 @@ rm -r tmpdotfiles
 git clone --depth=1 git@github.com:krolyxon/dwm.git ~/.local/src/dwm
 sudo make -C ~/.local/src/dwm install
 
+# dwmblocks: statusbar
+git clone --depth=1 git@github.com:krolyxon/dwmblocks.git ~/.local/src/dwmblocks
+sudo make -C ~/.local/src/dwmblocks install
+
 # st: Terminal
 git clone --depth=1 git@github.com:krolyxon/st-luke.git ~/.local/src/st
 sudo make -C ~/.local/src/st-luke install
