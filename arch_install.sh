@@ -64,7 +64,7 @@ pacman -S --noconfirm xorg-server xorg-xprop xorg-xkill xorg-xsetroot xorg-xinit
     pacman-contrib pavucontrol rsync ripgrep ueberzug ffmpegthumbnailer python-pywal \
     imlib2 xdotool xwallpaper zip unzip wget pcmanfm \
     fzf man-db pipewire pipewire-pulse xcompmgr pamixer \
-    xclip sxhkd imagemagick connman wpa_supplicant git dash arc-gtk-theme papirus-icon-theme \
+    xclip sxhkd imagemagick lf connman wpa_supplicant git dash arc-gtk-theme papirus-icon-theme \
     neovim lua rustup xdg-user-dirs mpd ncmpcpp unclutter \
     zsh zsh-autosuggestions zathura zathura-pdf-poppler
 
@@ -120,7 +120,7 @@ sudo wget https://raw.githubusercontent.com/krolyxon/keyd-config/master/default.
 
 # paru: AUR helper
 git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -sri && cd .. && rm -rf paru-bin
-paru -S --noconfirm htop-vim lf-bin \
+paru -S --noconfirm htop-vim \
     zsh-fast-syntax-highlighting-git keyd-git librewolf-bin
 
 chsh -s $(which zsh)
