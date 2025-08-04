@@ -64,7 +64,7 @@ pacman -S --noconfirm hyprland waybar hyprlock hyprpaper hyprpolkitagent hyprsho
     pacman-contrib pavucontrol rsync ripgrep ueberzug python-pywal \
     imlib2 zip unzip wget pcmanfm \
     fzf man-db pipewire pipewire-pulse xcompmgr pamixer \
-    xclip sxhkd imagemagick lf network-manager git dash arc-gtk-theme papirus-icon-theme \
+    sxhkd imagemagick lf network-manager git dash arc-gtk-theme papirus-icon-theme \
     neovim lua xdg-user-dirs mpd ncmpcpp unclutter \
     zsh zsh-autosuggestions zathura zathura-pdf-poppler
 
@@ -102,7 +102,11 @@ git clone --depth=1 git@github.com:krolyxon/nvim.git ~/.config/nvim
 # paru: AUR helper
 git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -sri && cd .. && rm -rf paru-bin
 paru -S --noconfirm htop-vim \
+<<<<<<< HEAD
     zsh-fast-syntax-highlighting-git keyd-git brave-bin
+=======
+    zsh-fast-syntax-highlighting keyd-git librewolf-bin
+>>>>>>> 5d5e4a3e5d08eb3ac5a62512d8f5e2c1590870d0
 
 chsh -s $(which zsh)
 

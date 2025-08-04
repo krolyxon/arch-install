@@ -115,7 +115,7 @@ pacman -S --noconfirm hyprland waybar hyprlock hyprpaper hyprpolkitagent hyprsho
     pacman-contrib pavucontrol rsync ripgrep ueberzug python-pywal \
     imlib2 zip unzip wget pcmanfm \
     fzf man-db pipewire pipewire-pulse xcompmgr pamixer \
-    xclip sxhkd imagemagick lf network-manager git dash arc-gtk-theme papirus-icon-theme \
+    sxhkd imagemagick lf network-manager git dash arc-gtk-theme papirus-icon-theme \
     neovim lua xdg-user-dirs mpd ncmpcpp unclutter \
     zsh zsh-autosuggestions zathura zathura-pdf-poppler
 
