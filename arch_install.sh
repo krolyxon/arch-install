@@ -57,14 +57,14 @@ sed -i 's/quiet/pci=noaer/g' /etc/default/grub
 sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
-pacman -S --noconfirm hyprland waybar hyprlock hyprpaper hyprpolkitagent hyprshot hyprsunset swaync \
+pacman -S --noconfirm hyprland waybar hyprlock hyprpaper hyprpolkitagent hyprshot gammastep swaync \
     noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-jetbrains-mono-nerd ttf-font-awesome \
     awesome-terminal-fonts bat libnotify ntfs-3g \
     jq mpv ncdu transmission-cli yt-dlp cowsay \
-    pacman-contrib pavucontrol rsync ripgrep ueberzug python-pywal \
-    imlib2 zip unzip wget pcmanfm \
+    pacman-contrib pavucontrol rsync ripgrep python-pywal \
+    imlib2 zip unzip wget pcmanfm yazi \
     fzf man-db pipewire pipewire-pulse xcompmgr pamixer \
-    sxhkd imagemagick lf network-manager git dash arc-gtk-theme papirus-icon-theme \
+    sxhkd imagemagick network-manager git dash arc-gtk-theme papirus-icon-theme \
     neovim lua xdg-user-dirs mpd ncmpcpp unclutter \
     zsh zsh-autosuggestions zathura zathura-pdf-poppler
 
@@ -102,11 +102,7 @@ git clone --depth=1 git@github.com:krolyxon/nvim.git ~/.config/nvim
 # paru: AUR helper
 git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -sri && cd .. && rm -rf paru-bin
 paru -S --noconfirm htop-vim \
-<<<<<<< HEAD
-    zsh-fast-syntax-highlighting-git keyd-git brave-bin
-=======
-    zsh-fast-syntax-highlighting keyd-git librewolf-bin
->>>>>>> 5d5e4a3e5d08eb3ac5a62512d8f5e2c1590870d0
+    zsh-fast-syntax-highlighting keyd-git zen-browser-bin
 
 chsh -s $(which zsh)
 

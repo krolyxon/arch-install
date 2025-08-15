@@ -108,14 +108,14 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 16. Install all the required user packages
 ```
-pacman -S --noconfirm hyprland waybar hyprlock hyprpaper hyprpolkitagent hyprshot hyprsunset swaync \
+pacman -S --noconfirm hyprland waybar hyprlock hyprpaper hyprpolkitagent hyprshot gammastep swaync \
     noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-jetbrains-mono-nerd ttf-font-awesome \
     awesome-terminal-fonts bat libnotify ntfs-3g \
     jq mpv ncdu transmission-cli yt-dlp cowsay \
-    pacman-contrib pavucontrol rsync ripgrep ueberzug python-pywal \
-    imlib2 zip unzip wget pcmanfm \
+    pacman-contrib pavucontrol rsync ripgrep python-pywal \
+    imlib2 zip unzip wget pcmanfm yazi \
     fzf man-db pipewire pipewire-pulse xcompmgr pamixer \
-    sxhkd imagemagick lf network-manager git dash arc-gtk-theme papirus-icon-theme \
+    sxhkd imagemagick network-manager git dash arc-gtk-theme papirus-icon-theme \
     neovim lua xdg-user-dirs mpd ncmpcpp unclutter \
     zsh zsh-autosuggestions zathura zathura-pdf-poppler
 
@@ -166,7 +166,7 @@ git clone --depth=1 git@github.com:krolyxon/nvim.git ~/.config/nvim
 24. paru: AUR helper
 ```
 git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -sri && cd .. && rm -rf paru-bin
-paru -S --noconfirm htop-vim zsh-fast-syntax-highlighting-git keyd-git librewolf-bin
+paru -S --noconfirm htop-vim zsh-fast-syntax-highlighting-git keyd-git zen-browser-bin
 ```
 
 25. set zsh as default shell
