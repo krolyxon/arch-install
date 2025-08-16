@@ -62,7 +62,7 @@ pacman -S --noconfirm hyprland waybar hyprlock hyprpaper hyprpolkitagent hyprsho
     awesome-terminal-fonts bat libnotify ntfs-3g \
     jq mpv ncdu transmission-cli yt-dlp cowsay \
     pacman-contrib pavucontrol rsync ripgrep python-pywal \
-    imlib2 zip unzip wget pcmanfm yazi \
+    imlib2 zip unzip wget pcmanfm yazi stow \
     fzf man-db pipewire pipewire-pulse xcompmgr pamixer \
     sxhkd imagemagick network-manager git dash arc-gtk-theme papirus-icon-theme \
     neovim lua xdg-user-dirs mpd ncmpcpp unclutter \
@@ -88,9 +88,9 @@ exit
 #part3
 printf '\033c'
 cd $HOME
-git clone --separate-git-dir=$HOME/.dotfiles git@github.com:krolyxon/dotfiles.git tmpdotfiles
-rsync --recursive --verbose --exclude '.git' tmpdotfiles/ $HOME/
-rm -r tmpdotfiles
+git clone git@github.com:krolyxon/dotfiles.git  ~/.dotfiles/
+cd ~/.dotfiles; stow .
+
 
 ## nsxiv: image viewer
 git clone --depth=1 git@github.com:krolyxon/nsxiv.git ~/.local/src/nsxiv
@@ -105,8 +105,4 @@ paru -S --noconfirm htop-vim \
     zsh-fast-syntax-highlighting keyd-git zen-browser-bin
 
 chsh -s $(which zsh)
-
-ln -s ~/.config/shell/profile .zprofile
-alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-dots config --local status.showUntrackedFiles no
 exit
