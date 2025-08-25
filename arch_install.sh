@@ -62,7 +62,7 @@ pacman -S --noconfirm hyprland waybar hyprlock hyprpaper hyprpolkitagent hyprsho
     awesome-terminal-fonts bat libnotify ntfs-3g \
     jq mpv ncdu transmission-cli yt-dlp cowsay \
     pacman-contrib pavucontrol rsync ripgrep python-pywal \
-    imlib2 zip unzip wget pcmanfm yazi stow \
+    imlib2 zip unzip wget pcmanfm yazi stow fuzzel \
     fzf man-db pipewire pipewire-pulse xcompmgr pamixer \
     sxhkd imagemagick network-manager git dash arc-gtk-theme papirus-icon-theme \
     neovim lua xdg-user-dirs mpd ncmpcpp unclutter \
