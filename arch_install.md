@@ -114,8 +114,8 @@ pacman -S --noconfirm hyprland waybar hyprlock hyprpaper hyprpolkitagent hyprsho
     jq mpv ncdu transmission-cli yt-dlp cowsay \
     pacman-contrib pavucontrol rsync ripgrep python-pywal \
     imlib2 zip unzip wget pcmanfm yazi stow fuzzel\
-    fzf man-db pipewire pipewire-pulse xcompmgr pamixer \
-    sxhkd imagemagick network-manager git dash arc-gtk-theme papirus-icon-theme \
+    fzf man-db pipewire pipewire-pulse pamixer kanshi \
+    imagemagick networkmanager git dash papirus-icon-theme \
     neovim lua xdg-user-dirs mpd ncmpcpp unclutter \
     zsh zsh-autosuggestions zathura zathura-pdf-poppler
 
