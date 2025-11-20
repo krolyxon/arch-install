@@ -117,7 +117,7 @@ pacman -S --noconfirm hyprland waybar hyprlock hyprpaper hyprpolkitagent hyprsho
     fzf man-db pipewire pipewire-pulse pamixer kanshi \
     imagemagick networkmanager git dash papirus-icon-theme \
     neovim lua xdg-user-dirs mpd ncmpcpp eza \
-    zsh zsh-autosuggestions zathura zathura-pdf-poppler
+    zsh zsh-autosuggestions zathura zathura-pdf-mupdf
 
 ```
 
