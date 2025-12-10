@@ -57,52 +57,12 @@ sed -i 's/quiet/pci=noaer/g' /etc/default/grub
 sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
-pacman -S --noconfirm hyprland waybar hyprlock hyprpaper hyprpolkitagent hyprshot gammastep swaync \
-    noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-jetbrains-mono-nerd ttf-font-awesome \
-    awesome-terminal-fonts bat libnotify ntfs-3g \
-    jq mpv ncdu transmission-cli yt-dlp cowsay \
-    pacman-contrib pavucontrol rsync ripgrep python-pywal \
-    imlib2 zip unzip wget pcmanfm gvfs xarchiver lf chafa stow fuzzel\
-    fzf man-db pipewire pipewire-pulse pamixer kanshi \
-    imagemagick networkmanager git dash papirus-icon-theme \
-    neovim lua xdg-user-dirs mpd ncmpcpp eza \
-    zsh zsh-autosuggestions zathura zathura-pdf-mupdf
+pacman -S --noconfirm networkmanager git
 
 systemctl enable NetworkManager.service
-rm /bin/sh
-ln -s dash /bin/sh
-# echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 echo "%wheel ALL=(ALL:ALL) ALL" >> /etc/sudoers
 printf "\e[0;34mEnter Username: \e[0m"
 read username
 useradd -m -G wheel -s /bin/zsh $username
 passwd $username
-echo "Pre-Installation Finish Reboot now"
-ai3_path=/home/$username/arch_install3.sh
-sed '1,/^#part3/d' arch_install2.sh > $ai3_path
-chown $username:$username $ai3_path
-chmod +x $ai3_path
-su -c $ai3_path -s /bin/sh $username
-exit
-
-#part3
-printf '\033c'
-cd $HOME
-git clone git@github.com:krolyxon/dotfiles.git  ~/.dotfiles/
-cd ~/.dotfiles; stow .
-
-
-## nsxiv: image viewer
-git clone --depth=1 git@github.com:krolyxon/nsxiv.git ~/.local/src/nsxiv
-sudo make -C ~/.local/src/nsxiv install
-
-## nvim: Text editor
-git clone --depth=1 git@github.com:krolyxon/nvim.git ~/.config/nvim
-
-# paru: AUR helper
-git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -sri && cd .. && rm -rf paru-bin
-paru -S --noconfirm htop-vim \
-    zsh-fast-syntax-highlighting keyd-git zen-browser-bin
-
-chsh -s $(which zsh)
-exit
+echo "Installation Finish Reboot now"

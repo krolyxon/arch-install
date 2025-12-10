@@ -108,67 +108,22 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 16. Install all the required user packages
 ```
-pacman -S --noconfirm hyprland waybar hyprlock hyprpaper hyprpolkitagent hyprshot gammastep swaync \
-    noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-jetbrains-mono-nerd ttf-font-awesome \
-    awesome-terminal-fonts bat libnotify ntfs-3g \
-    jq mpv ncdu transmission-cli yt-dlp cowsay \
-    pacman-contrib pavucontrol rsync ripgrep python-pywal \
-    imlib2 zip unzip wget pcmanfm gvfs xarchiver lf chafa stow fuzzel\
-    fzf man-db pipewire pipewire-pulse pamixer kanshi \
-    imagemagick networkmanager git dash papirus-icon-theme \
-    neovim lua xdg-user-dirs mpd ncmpcpp eza \
-    zsh zsh-autosuggestions zathura zathura-pdf-mupdf
-
+pacman -S --noconfirm networkmanager git
 ```
 
 17. Enable networkmanager
 ```
-# network manager
 systemctl enable NetworkManager.service
 ```
 
-18. set shell
-```
-rm /bin/sh
-ln -s dash /bin/sh
-```
-
-19. Set user permissions
+18. Set user permissions
 ```
 echo "%wheel ALL=(ALL:ALL) ALL" >> /etc/sudoers
 ```
 
-20. Create user
+19. Create user
 ```
 useradd -m -G wheel -s /bin/zsh $username
 passwd $username
 ```
 
-21. Setup dotfiles
-```
-cd $HOME
-git clone git@github.com:krolyxon/dotfiles.git  ~/.dotfiles/
-cd ~/.dotfiles; stow .
-```
-
-22. nsxiv: image viewer
-```
-git clone --depth=1 git@github.com:krolyxon/nsxiv.git ~/.local/src/nsxiv
-sudo make -C ~/.local/src/nsxiv install
-```
-
-23. nvim: Text editor
-```
-git clone --depth=1 git@github.com:krolyxon/nvim.git ~/.config/nvim
-```
-
-24. paru: AUR helper
-```
-git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -sri && cd .. && rm -rf paru-bin
-paru -S --noconfirm htop-vim zsh-fast-syntax-highlighting-git keyd-git zen-browser-bin
-```
-
-25. set zsh as default shell
-```
-chsh -s $(which zsh)
-```
