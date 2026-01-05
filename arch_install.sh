@@ -53,8 +53,11 @@ read efipartition
 mkdir /boot/efi
 mount $efipartition /boot/efi
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=archlinux --recheck
-sed -i 's/quiet/pci=noaer/g' /etc/default/grub
-sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub
+read -rp "Do you want to set GRUB_TIMEOUT=0? (y/N): " confirm
+if [[ "$confirm" =~ ^[Yy]$ ]]; then
+    sed -i 's/quiet/pci=noaer/g' /etc/default/grub
+    sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub
+fi
 grub-mkconfig -o /boot/grub/grub.cfg
 
 pacman -S --noconfirm networkmanager git
