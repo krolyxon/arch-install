@@ -123,7 +123,7 @@ echo "%wheel ALL=(ALL:ALL) ALL" >> /etc/sudoers
 
 19. Create user
 ```
-useradd -m -G wheel -s /bin/zsh $username
+useradd -m -G wheel $username
 passwd $username
 ```
 

@@ -66,6 +66,6 @@ systemctl enable NetworkManager.service
 echo "%wheel ALL=(ALL:ALL) ALL" >> /etc/sudoers
 printf "\e[0;34mEnter Username: \e[0m"
 read username
-useradd -m -G wheel -s /bin/zsh $username
+useradd -m -G wheel $username
 passwd $username
 echo "Installation Finish Reboot now"
