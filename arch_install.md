@@ -103,6 +103,8 @@ grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=archl
 sed -i 's/quiet/pci=noaer/g' /etc/default/grub
 sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub
 
+echo "GRUB_DISABLE_OS_PROBER=false" >>  /etc/default/grub
+
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 

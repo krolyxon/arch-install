@@ -58,6 +58,10 @@ if [[ "$confirm" =~ ^[Yy]$ ]]; then
     sed -i 's/quiet/pci=noaer/g' /etc/default/grub
     sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub
 fi
+read -rp "Do you want to enable probing for other operating systems? (y/N): " confirm
+if [[ "$confirm" =~ ^[Yy]$ ]]; then
+    echo "GRUB_DISABLE_OS_PROBER=false" >>  /etc/default/grub
+fi
 grub-mkconfig -o /boot/grub/grub.cfg
 
 pacman -S --noconfirm networkmanager git
